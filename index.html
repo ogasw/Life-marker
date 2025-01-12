@@ -1,0 +1,44 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            text-decoration: none;
+            color: #4facfe;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Online Shopping</h1>
+    {% if user %}
+        <div class="container">
+            <h2>Hello, {{ user }}</h2>
+            <p>Browse our latest collection!</p>
+            <a href="/sign-out">Sign Out</a>
+        </div>
+    {% else %}
+        <div class="container">
+            <h2>Please Sign In</h2>
+            <a href="/sign-in">Sign In</a>
+        </div>
+    {% endif %}
+</body>
+</html>
+  
